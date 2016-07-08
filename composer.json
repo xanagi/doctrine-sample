@@ -1,0 +1,15 @@
+{
+    "name": "xanagi/doctrine-sample",
+    "autoload": {
+        "psr-4": {
+           "Sample\\": "src/"
+        }
+    },
+    "require": {
+        "doctrine/dbal": "v2.5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.4.*",
+        "phake/phake": "2.*"
+    }
+}

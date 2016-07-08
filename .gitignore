@@ -1,0 +1,11 @@
+.vagrant
+logs
+log
+tmp
+*.log
+*.bak
+.DS_Store
+~*
+
+# PHP
+vendor

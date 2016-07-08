@@ -1,0 +1,22 @@
+version: "2"
+
+services:
+  # See https://registry.hub.docker.com/_/mysql/
+  mysql:
+    container_name: dctr-mysql
+    build: ./docker/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+    networks:
+      - internal
+  # See https://registry.hub.docker.com/_/php/
+  php:
+    container_name: dctr-php
+    build: ./docker/php
+    volumes:
+      - .:/sample
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge
