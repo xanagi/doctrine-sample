@@ -5,6 +5,7 @@ services:
   mysql:
     container_name: dctr-mysql
     build: ./docker/mysql
+    image: xanagi/dctr-mysql
     environment:
       MYSQL_ROOT_PASSWORD: pass
     networks:
@@ -13,6 +14,7 @@ services:
   php:
     container_name: dctr-php
     build: ./docker/php
+    image: xanagi/dctr-php
     volumes:
       - .:/sample
     networks:
